@@ -52,4 +52,9 @@ aws ec2 create-security-group --group-name CustomMetricLab --description "Tempor
 aws ec2 authorize-security-group-ingress --group-name CustomMetricLab --protocol tcp --port 22 --cidr 0.0.0.0/0
 ```
 
+3. Launch instance in US-EAST-1A
+
+```bash
+aws ec2 run-instances --image-id <LINUX_AMI_ID> --instance-type t2.micro --placement AvailabilityZone=us-east-1a --security-group-ids <YOUR_SG_ID> --iam-instance-profile Name="CloudWatch-Instance-Profile"
+```
 
