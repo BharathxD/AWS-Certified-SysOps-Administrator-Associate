@@ -46,3 +46,10 @@ aws iam add-role-to-instance-profile --instance-profile-name "CloudWatch-Instanc
 aws ec2 create-security-group --group-name CustomMetricLab --description "Temporary SG for the Custom Metric Lab"
 ```
 
+2. Add a rule for SSH inbound to the security group
+
+```bash
+aws ec2 authorize-security-group-ingress --group-name CustomMetricLab --protocol tcp --port 22 --cidr 0.0.0.0/0
+```
+
+
