@@ -82,3 +82,33 @@ sudo nano mem-usage.sh
 
 aws cloudwatch put-metric-data --region us-east-1 --namespace "Custom/Memory" --metric-name "MemUsage" --value "$(free | awk '/Mem/{printf("%d", ($2-$7)/$2*100)}')" --unit "Percent" --dimensions "Name=InstanceId,Value=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)"
 ```
+
+3. Make the script executable
+
+```bash
+sudo chmod +x mem-usage.sh
+```
+
+4. Add the script to crontab, first open crontab
+
+```bash
+crontab -e
+```
+
+5. Then, add the following line to execute the script every minute
+
+```bash
+* * * * * /home/ec2-user/mem-usage.sh
+```
+
+6. Save by typing the following and pressing enter
+
+```bash
+:wq
+```
+
+## Run the stres utility to generate load
+
+```bash
+stress-ng --vm 15 --vm-bytes 80% --vm-method all --verify -t 60m -v
+```
