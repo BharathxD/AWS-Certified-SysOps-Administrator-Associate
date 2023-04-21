@@ -67,7 +67,7 @@ sudo amazon-linux-extras install epel -y
 sudo yum install stress-ng -y
 ```
 
-## Configure a shell script that uses the put-metric-data API
+# Step 4 | Configure a shell script that uses the put-metric-data API
 
 1. Create a shell script named mem-usage.sh
 
@@ -107,8 +107,12 @@ crontab -e
 :wq
 ```
 
-## Run the stres utility to generate load
+# Step 5 | Run the stres utility to generate load
 
 ```bash
 stress-ng --vm 15 --vm-bytes 80% --vm-method all --verify -t 60m -v
 ```
+
+# Step 6 | Create a custom CloudWatch Alarm
+
+1. Create a custom CloudWatch alarm and select the previously created metric `MemUsage`
