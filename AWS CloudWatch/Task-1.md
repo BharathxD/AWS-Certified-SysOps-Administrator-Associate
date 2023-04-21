@@ -17,5 +17,23 @@ aws iam create-role --role-name "CloudWatch-Role" --assume-role-policy-document 
 3. Attach the policy to the role (update policy ARN)
 
 ```bash
-aws iam attach-role-policy --role-name "CloudWatch-Role" --policy-arn "arn:aws:iam::821711655051:policy/CloudWatch-Put-Metric-Data"
+aws iam attach-role-policy --role-name "CloudWatch-Role" --policy-arn "arn:aws:iam::<YOUR_ACC_NO>:policy/CloudWatch-Put-Metric-Data"
+```
+
+4. Create an instance profile
+
+```bash
+aws iam create-instance-profile --instance-profile-name "CloudWatch-Instance-Profile"
+```
+
+5. Add the role to the instance profile
+
+```bash
+aws iam add-role-to-instance-profile --instance-profile-name "CloudWatch-Instance-Profile" --role-name "CloudWatch-Role"
+```
+
+5. Add the role to the instance profile
+
+```bash
+aws iam add-role-to-instance-profile --instance-profile-name "CloudWatch-Instance-Profile" --role-name "CloudWatch-Role"
 ```
