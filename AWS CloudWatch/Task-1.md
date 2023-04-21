@@ -14,3 +14,8 @@ aws iam create-policy --policy-name "CloudWatch-Put-Metric-Data" --policy-docume
 aws iam create-role --role-name "CloudWatch-Role" --assume-role-policy-document '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"ec2.amazonaws.com"},"Action":"sts:AssumeRole"}]}'
 ```
 
+3. Attach the policy to the role (update policy ARN)
+
+```bash
+aws iam attach-role-policy --role-name "CloudWatch-Role" --policy-arn "arn:aws:iam::821711655051:policy/CloudWatch-Put-Metric-Data"
+```
