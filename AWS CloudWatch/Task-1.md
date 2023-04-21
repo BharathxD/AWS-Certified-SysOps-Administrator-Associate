@@ -37,3 +37,12 @@ aws iam add-role-to-instance-profile --instance-profile-name "CloudWatch-Instanc
 ```bash
 aws iam add-role-to-instance-profile --instance-profile-name "CloudWatch-Instance-Profile" --role-name "CloudWatch-Role"
 ```
+
+## Step - 2 | Launch an EC2 instance
+
+1. Create a security group
+
+```bash
+aws ec2 create-security-group --group-name CustomMetricLab --description "Temporary SG for the Custom Metric Lab"
+```
+
