@@ -58,3 +58,27 @@ aws ec2 authorize-security-group-ingress --group-name CustomMetricLab --protocol
 aws ec2 run-instances --image-id <LINUX_AMI_ID> --instance-type t2.micro --placement AvailabilityZone=us-east-1a --security-group-ids <YOUR_SG_ID> --iam-instance-profile Name="CloudWatch-Instance-Profile"
 ```
 
+# Step 3 | Run the remaining commands from the EC2 instance
+
+## Install stress
+
+```bash
+sudo amazon-linux-extras install epel -y
+sudo yum install stress-ng -y
+```
+
+## Configure a shell script that uses the put-metric-data API
+
+1. Create a shell script named mem-usage.sh
+
+```bash
+sudo nano mem-usage.sh
+```
+
+2. Add the following code and save:
+
+```bash
+#!/bin/bash
+
+aws cloudwatch put-metric-data --region us-east-1 --namespace "Custom/Memory" --metric-name "MemUsage" --value "$(free | awk '/Mem/{printf("%d", ($2-$7)/$2*100)}')" --unit "Percent" --dimensions "Name=InstanceId,Value=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)"
+```
