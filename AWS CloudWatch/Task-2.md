@@ -10,3 +10,39 @@
 `CloudWatchAgentServerRole`
 
 4. Launch an EC2 instance and attach the role
+
+# Install the CloudWatch agent using SSM Run Command
+
+1. Choose AWS-ConfigureAWSPackage
+
+2. Under name enter AmazonCloudWatchAgent
+
+3. Install collectd
+
+```bash
+sudo amazon-linux-extras install collectd
+```
+
+4. Run the wizard on the EC2 instance command line
+
+```bash
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+```
+
+5. During the wizard specify additional log file collection
+
+```bash
+/var/log/messages
+```
+
+6. Run the following commmand
+
+```bash
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+```
+
+7. Then make sure the agent is started
+
+```bash
+sudo systemctl start amazon-cloudwatch-agent
+```
