@@ -47,3 +47,27 @@ sudo systemctl start amazon-cloudwatch-agent
 ```
 
 9. Generate some traffic to Apache including some 404s
+
+# Create a metric filter and alarm
+
+1. Create a metric filter and use the following pattern
+
+```sql
+[host, logName, user, timestamp, request, statusCode=404, size]
+```
+
+2. Define the filter and create
+
+```sql
+Name = 404
+Metric namespace = HTTPStatusCode
+Metric name = 404Error
+Metric value = 1
+Unit = Count
+```
+
+3. Create an alarm for the filter with count greater than 2 in 5 minutes
+
+4. Create a new SNS Topic or use an existing one
+
+5. Generate more 404 errors
