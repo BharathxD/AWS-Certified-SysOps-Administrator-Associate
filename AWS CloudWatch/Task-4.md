@@ -31,3 +31,19 @@ sudo rm -rf /opt/aws/amazon-cloudwatch-agent/bin/config.json
 ```bash
 sudo nano /opt/aws/amazon-cloudwatch-agent/bin/config.json
 ```
+
+6. Add the contents from the cw-config.json file provided
+
+7. Run the following commmand
+
+```bash
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+```
+
+8. Then make sure the agent is started
+
+```bash
+sudo systemctl start amazon-cloudwatch-agent
+```
+
+9. Generate some traffic to Apache including some 404s
