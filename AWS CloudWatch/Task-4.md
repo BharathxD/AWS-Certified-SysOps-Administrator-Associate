@@ -5,3 +5,10 @@
 ```bash
 sudo yum install amazon-cloudwatch-agent
 ```
+
+2. Also, install collectd
+
+```bash
+sudo amazon-linux-extras install collectd
+```
+
