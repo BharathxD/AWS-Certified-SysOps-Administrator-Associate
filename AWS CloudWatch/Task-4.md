@@ -12,3 +12,10 @@ sudo yum install amazon-cloudwatch-agent
 sudo amazon-linux-extras install collectd
 ```
 
+3. Install and enable Apache
+
+```bash
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+```
