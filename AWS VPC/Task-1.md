@@ -43,3 +43,11 @@ aws ec2 create-nat-gateway --subnet-id <public-subnet-id> --allocation-id <eip-a
 aws ec2 create-route --route-table-id <route-table-id> --destination-cidr-block 0.0.0.0/0 --nat-gateway-id <nat-gateway-id>
 ```
 
+# Launch EC2 instance
+
+1. Create a security group
+
+```bash
+aws ec2 create-security-group --group-name NAT-GW-LAB --description "Temporary SG for the NAT gateway Lab"
+```
+
