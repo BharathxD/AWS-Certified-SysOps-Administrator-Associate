@@ -11,3 +11,9 @@ aws ec2 create-subnet --vpc-id <INSERT_DEFAULT_VPCID> --cidr-block 172.31.96.0/2
 ```bash
 aws ec2 create-subnet --vpc-id <INSERT_DEFAULT_VPCID> --cidr-block 172.31.112.0/20 --availability-zone us-east-1b --tag-specifications 'ResourceType=subnet,Tags=[{Key=Name,Value=private-1b}]'
 ```
+
+## Create a route table in the default VPC
+
+```bash
+aws ec2 create-route-table --vpc-id <default-vpc-id> --tag-specifications 'ResourceType=route-table,Tags=[{Key=Name,Value=PrivateRT}]'
+```
