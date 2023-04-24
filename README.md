@@ -5,3 +5,4 @@ Below are the links to the tasks for various services covered in the AWS Certifi
 | Service    | Link to the service                        |
 | ---------- | ------------------------------------------ |
 | CloudWatch | [Click Here](./AWS%20CloudWatch/README.md) |
+| VPC        | [Click Here](./AWS%20VPC/README.md) |

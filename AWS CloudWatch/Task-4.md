@@ -53,17 +53,17 @@ sudo systemctl start amazon-cloudwatch-agent
 1. Create a metric filter and use the following pattern
 
 ```sql
-[host, logName, user, timestamp, request, statusCode=404, size]
+    [host, logName, user, timestamp, request, statusCode=404, size]
 ```
 
 2. Define the filter and create
 
 ```sql
-Name = 404
-Metric namespace = HTTPStatusCode
-Metric name = 404Error
-Metric value = 1
-Unit = Count
+    Name = 404
+    Metric namespace = HTTPStatusCode
+    Metric name = 404Error
+    Metric value = 1
+    Unit = Count
 ```
 
 3. Create an alarm for the filter with count greater than 2 in 5 minutes
