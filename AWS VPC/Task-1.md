@@ -31,3 +31,9 @@ aws ec2 associate-route-table --route-table-id <route-table-id> --subnet-id <pri
 aws ec2 allocate-address
 ```
 
+6. Create a NAT gateway
+
+```bash
+aws ec2 create-nat-gateway --subnet-id <public-subnet-id> --allocation-id <eip-allocation-id>
+```
+
