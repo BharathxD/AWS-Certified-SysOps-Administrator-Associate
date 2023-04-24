@@ -25,3 +25,9 @@ aws ec2 associate-route-table --route-table-id <route-table-id> --subnet-id <pri
 aws ec2 associate-route-table --route-table-id <route-table-id> --subnet-id <private-subnet-id-1b>
 ```
 
+5. Create an Elastic IP
+
+```bash
+aws ec2 allocate-address
+```
+
