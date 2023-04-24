@@ -51,3 +51,8 @@ aws ec2 create-route --route-table-id <route-table-id> --destination-cidr-block 
 aws ec2 create-security-group --group-name NAT-GW-LAB --description "Temporary SG for the NAT gateway Lab"
 ```
 
+2. Launch instance in US-EAST-1A
+
+```bash
+aws ec2 run-instances --image-id ami-005f9685cb30f234b --instance-type t2.micro --subnet-id <private-subnet-id> --security-group-ids <security-group-id> --iam-instance-profile Name=SSMInstanceProfile
+```
