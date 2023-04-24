@@ -37,3 +37,9 @@ aws ec2 allocate-address
 aws ec2 create-nat-gateway --subnet-id <public-subnet-id> --allocation-id <eip-allocation-id>
 ```
 
+7. Update the private route table to point to the NAT gateway
+
+```bash
+aws ec2 create-route --route-table-id <route-table-id> --destination-cidr-block 0.0.0.0/0 --nat-gateway-id <nat-gateway-id>
+```
+
