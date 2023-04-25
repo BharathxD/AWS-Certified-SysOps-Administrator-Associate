@@ -7,3 +7,4 @@ Below are the links to the tasks for various services covered in the AWS Certifi
 | CloudWatch | [Click Here](./AWS%20CloudWatch/README.md) |
 | VPC        | [Click Here](./AWS%20VPC/README.md)        |
 | CloudFront | [Click Here](./AWS%20CloudFront/Task-1.md) |
+| IAM        | [Click Here](./AWS%20IAM/README.md)          |
