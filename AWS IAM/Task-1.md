@@ -3,8 +3,11 @@
 ```bash
 aws sts get-session-token --serial-number arn:aws:iam::<account-id>:mfa/<user-name> --token-code <token-from-device>
 ```
+---
 
-# `Note`: Use 'set' rather than 'export' for Windows
+#### `Note`: Use 'set' rather than 'export' for Windows
+
+---
 
 ```bash
 export AWS_ACCESS_KEY_ID=<access-key-id>
