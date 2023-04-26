@@ -5,3 +5,6 @@
 2. Add an inline policy to the role with the JSON from the `policy.json` document
 
 3. Create a config rule using the `pc-sg-open-only-to-authorized-ports` managed rule
+
+4. Add port 80 next to `authorizedTcpPorts`
+
