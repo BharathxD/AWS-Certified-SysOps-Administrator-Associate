@@ -13,3 +13,5 @@
 6. For Resource ID parameter specify `GroupId`
 
 7. For IpAddressToBlock specify `0.0.0.0/0`
+
+8. For AutomationAssumeRole specify the `ARN` of the role created earlier
