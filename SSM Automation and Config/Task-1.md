@@ -6,5 +6,6 @@
 
 3. Create a config rule using the `pc-sg-open-only-to-authorized-ports` managed rule
 
-4. Add port 80 next to `authorizedTcpPorts`
+4. Add port 80 next to 5. Add a remediation rule using the automatic action `AWS-DisablePublicAccessForSecurityGroup`
 
+5. Add a remediation rule using the automatic action `AWS-DisablePublicAccessForSecurityGroup`
