@@ -11,3 +11,5 @@
 5. Add a remediation rule using the automatic action `AWS-DisablePublicAccessForSecurityGroup`
 
 6. For Resource ID parameter specify `GroupId`
+
+7. For IpAddressToBlock specify `0.0.0.0/0`
