@@ -10,3 +10,5 @@ Below are the links to the tasks for various services covered in the AWS Certifi
 | IAM           | [`Click Here`](./AWS%20IAM/README.md)                               |
 | S3            | [`Click Here`](./AWS%20S3/README.md)                                |
 | SSM & Config  | [`Click Here`](./SSM%20Automation%20and%20Config/README.md)         |
+| EventBridge   | [`Click Here`](./AWS%20EventBridge/)                                |
+
