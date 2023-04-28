@@ -18,5 +18,10 @@ aws autoscaling put-lifecycle-hook --auto-scaling-group-name ASG1 --lifecycle-ho
 
 5. Subscribe the function to the topic
 
+```bash
 aws sns subscribe --topic-arn <sns-topic-arn> --protocol lambda --notification-endpoint arn:aws:lambda:us-east-1:821711655051:function:lambda-lifecycle
+```
 
+6. Check that the trigger is present in Lambda, create if necessary
+
+7. Test the lifecycle hook by terminating an EC2 instance (change the desired capacity to 0)
