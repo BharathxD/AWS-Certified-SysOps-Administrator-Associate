@@ -22,10 +22,28 @@ aws autoscaling create-auto-scaling-group --auto-scaling-group-name ASG1 --launc
 
 ## Create target group, load balancer, listener, and then link it all up
 
+```bash
 aws elbv2 create-target-group --name TG1 --protocol HTTP --port 80 --vpc-id <vpc-id>
+```
 
+```bash
 aws elbv2 create-load-balancer --name ALB1 --subnets <subnet-id> <subnet-id> --security-groups <security-group-id>
+```
 
+```bash
 aws elbv2 create-listener --load-balancer-arn <alb-arn> --protocol HTTP --port 80 --default-actions Type=forward,TargetGroupArn=<target-group-arn>
+```
 
+```bash
 aws autoscaling attach-load-balancer-target-groups --auto-scaling-group-name ASG1 --target-group-arns <target-group-arn>
+```
+
+## Cleanup
+
+```bash
+aws elbv2 delete-load-balancer --load-balancer-arn <alb-arn>
+```
+
+```bash
+aws autoscaling delete-auto-scaling-group --auto-scaling-group-name ASG1 --force-delete
+```
