@@ -5,3 +5,10 @@
 ```bash
 aws sns create-topic --name my-lifecycle-topic
 ```
+
+2. Create a lifecycle hook
+
+```bash
+aws autoscaling put-lifecycle-hook --auto-scaling-group-name ASG1 --lifecycle-hook-name my-lifecycle-hook --lifecycle-transition autoscaling:EC2_INSTANCE_TERMINATING --notification-target-arn <sns-topic-arn> --role-arn arn:aws:iam::821711655051:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling --heartbeat-timeout 300
+```
+
