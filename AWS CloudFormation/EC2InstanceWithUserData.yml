@@ -1,4 +1,4 @@
-Resources:
+sResources:
   MyEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
