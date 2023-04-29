@@ -32,3 +32,7 @@ Subnet associations: `Private-1A`, `Private-1B`
 Name: `MyIGW`
 VPC: `MyVPC`
 
+## Create NAT Gateway
+
+Name: `MyNatGW`
+Subnet: `Public-1A`
