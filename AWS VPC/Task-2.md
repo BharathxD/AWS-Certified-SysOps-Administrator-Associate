@@ -26,3 +26,9 @@ IPv4 CIDR Block: `10.0.4.0/24`
 Name: `Private-RT`
 VPC: `MyVPC`
 Subnet associations: `Private-1A`, `Private-1B`
+
+# Create Internet Gateway
+
+Name: `MyIGW`
+VPC: `MyVPC`
+
