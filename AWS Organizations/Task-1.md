@@ -27,3 +27,10 @@
 
 4. Attach the SCP to the OU that contains the dev account (OU1)
 
+5. Switch roles to administer the dev account
+
+## Switch role using:
+
+Account number of the dev account
+Role: `OrganizationAccountAccess`
+
