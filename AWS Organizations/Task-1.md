@@ -24,3 +24,6 @@
   ]
 }
 ```
+
+4. Attach the SCP to the OU that contains the dev account (OU1)
+
