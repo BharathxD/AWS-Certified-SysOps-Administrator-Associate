@@ -8,6 +8,7 @@ Below are the links to the tasks for various services covered in the AWS Certifi
 | VPC                 | [`Click Here`](./AWS%20VPC/README.md)                       |
 | CloudFront          | [`Click Here`](./AWS%20CloudFront/Task-1.md)                |
 | IAM                 | [`Click Here`](./AWS%20IAM/README.md)                       |
+| Organizations       | [`Click Here`](./AWS%20Organizations/README.md)             |
 | S3                  | [`Click Here`](./AWS%20S3/README.md)                        |
 | SSM & Config        | [`Click Here`](./SSM%20Automation%20and%20Config/README.md) |
 | EventBridge         | [`Click Here`](./AWS%20EventBridge/)                        |
