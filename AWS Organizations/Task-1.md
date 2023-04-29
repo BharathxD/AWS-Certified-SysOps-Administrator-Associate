@@ -29,8 +29,17 @@
 
 5. Switch roles to administer the dev account
 
-## Switch role using:
+## Switch Role
 
 Account number of the dev account
 Role: `OrganizationAccountAccess`
 
+## Test Service Control Policy
+
+6. In Amazon EC2 attempt to launch a t2.micro instance. It should work
+
+7. Next, attempt to launch any other EC2 instance type. It should fail
+
+8. Switch back to the management account, and attach the SCP to the Root OU
+
+9. Attempt to launch a t2.medium instance. What happens?
